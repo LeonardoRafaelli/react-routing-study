@@ -2,19 +2,19 @@
 import './App.css';
 import PageA from './pages/PageA';
 import PageB from './pages/PageB';
-import { BrowserRouter, Routes, Route, Link , Outlet} from 'react-router-dom';
+import {Routes, Route, Link , Outlet} from 'react-router-dom';
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="pageA" element={<PageA />} />
-          <Route path="pageB" element={<PageB />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="pageA" element={<PageA />} />
+        <Route path="pageB" element={<PageB />} />
+      </Route>
+    </Routes>
+
   );
 }
 
@@ -28,8 +28,9 @@ function Layout() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="pageA"> Page A</Link></li>
         <li><Link to="pageB"> Page B</Link></li>
+        <li><Link to="produto"> Look the product! </Link></li>
       </ul>
-      <div className='Content'>
+      <div className='content'>
           <Outlet />
       </div>
     </>
