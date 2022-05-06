@@ -25,6 +25,7 @@ function Layout() {
       <h1>Fixed layout</h1>
       <p>Options: </p>
       <ul>
+        <li><Link to="/">Home</Link></li>
         <li><Link to="pageA"> Page A</Link></li>
         <li><Link to="pageB"> Page B</Link></li>
       </ul>
